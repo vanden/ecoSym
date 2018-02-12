@@ -99,6 +99,15 @@ Get the ecosystem grid world updating from turn to turn
 ### Day 4
 - [ ] Implement user controls for the parameters.
 
+## Wireframe
+
+The Plant and Herbivore controls will likely be labeled sliders, but
+this has not yet been determined. The "world" will be a grid of coloured
+cells; doing that up in a wireframe editor was simply too difficult.
+
+![alt text](https://github.com/vanden/ecoSym/blob/master/assets/ecoSym_wireframe.png "Wireframe Diagram")
+
+
 ## Bonus features
 
 * Additional parameters and attributes may be added to plants and
