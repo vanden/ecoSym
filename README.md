@@ -70,6 +70,11 @@ There will be several scripts involved in this project:
   logic will be defined  
 * `world.js`: Will handle creating and updating the two dimensional grid
   world
+* `cell.js': Will provide a class for the cells of the grid world. These
+  cells will store their co-ordinates, immediate neighbours, and
+  contents. Storing the immediate neighbours will allow these
+  relationships to be computed a single time and the LifeForms in the
+  cell will be able to use that information.  
 
 
 ## Implementation Timeline
@@ -80,7 +85,8 @@ There will be several scripts involved in this project:
 - [x] Review Asteroids project.
 - [x] Get a minimal `webpack.config.js` and `package.json` written for the
       build process.
-- [ ] Start on writing `lifeforms.js`.      
+- [x] Start on writing `world.js` and `cell.js`.
+- [x] Start on writing `herbivore.js`, `lifeform.js`, and `plant.js`.
 
 ### Day 1
 Write enough of `world.js` to get the ecosystem grid painted to the screen with a `Canvas` element.
