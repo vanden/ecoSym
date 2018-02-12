@@ -78,7 +78,7 @@ There will be several scripts involved in this project:
 
 - [x] Review Canvas Tutorials.
 - [x] Review Asteroids project.
-- [ ] Get a minimal `webpack.config.js` and `package.json` written for the
+- [x] Get a minimal `webpack.config.js` and `package.json` written for the
       build process.
 - [ ] Start on writing `lifeforms.js`.      
 
