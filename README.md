@@ -70,7 +70,7 @@ There will be several scripts involved in this project:
   logic will be defined  
 * `world.js`: Will handle creating and updating the two dimensional grid
   world
-* `cell.js': Will provide a class for the cells of the grid world. These
+* `cell.js`: Will provide a class for the cells of the grid world. These
   cells will store their co-ordinates, immediate neighbours, and
   contents. Storing the immediate neighbours will allow these
   relationships to be computed a single time and the LifeForms in the
