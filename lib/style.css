@@ -1,0 +1,86 @@
+html, body, figure, figcaption, ul, li, h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    text-align: inherit;
+}
+
+
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+figure .world {
+    display: inline-block;
+    border: 3px solid black;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+ul:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+li {
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+
+
+.cell {
+    outline: 1px solid;
+    float: left;
+    color: WhiteSmoke ;
+    list-style: none;
+    width: 15px;
+    height: 15px;
+}
+
+/* These don't really seem the right choices. But, good enough for now. */
+.herbivore-1 {
+    background-color: lightcoral;
+}
+.herbivore-2 {
+    background-color: indianred;
+}
+.herbivore-3 {
+    background-color: red;
+}
+.herbivore-4 {
+    background-color: firebrick;
+}
+.herbivore-5 {
+    background-color: darkred;
+}
+
+.plant-0 {
+    background-color: palegreen;
+}
+.plant-1 {
+    background-color: lime;
+}
+.plant-2 {
+    background-color: limegreen;
+}
+.plant-3 {
+    background-color: seagreen;
+}
+.plant-4 {
+    background-color: forestgreen;
+}
+.plant-5 {
+    background-color: darkgreen;
+}
