@@ -21,7 +21,6 @@
 
 .byebug_history
 
-bundle.js
 bundle.js.map
 .byebug_history
 npm-debug.log
