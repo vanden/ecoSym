@@ -102,3 +102,32 @@ li {
     padding-top: 25px;
     padding-bottom: 15px;
 }
+
+
+.main {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.world-container {
+    width: 60vw;
+}
+
+
+.description {
+
+    width: 20vw;
+    padding-left: 2vw;
+    text-align: left;
+    font-size: small;
+
+}
+
+
+.controls {
+
+    width: 20vw;
+}
