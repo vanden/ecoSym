@@ -21,23 +21,23 @@ figure .world {
 }
 
 
-ul {
+ul .word-row{
     list-style: none;
 }
 
 
-ul:after {
+ul .world-row:after {
     content: "";
     clear: both;
     display: block;
 }
 
 
-li {
-    float: left;
-    width: 20px;
-    height: 20px;
-}
+/* li .cell { */
+/*     float: left; */
+/*     width: 20px; */
+/*     height: 20px; */
+/* } */
 
 
 .cell {
@@ -48,6 +48,8 @@ li {
     width: 15px;
     height: 15px;
 }
+
+
 
 /* These don't really seem the right choices. But, good enough for now. */
 .herbivore-1 {
@@ -112,15 +114,21 @@ li {
 }
 
 
+.ecosym-world {
+    padding-bottom: 25px;
+}
+
+
 .world-container {
-    width: 60vw;
+    width: 50vw;
 }
 
 
 .description {
 
-    width: 20vw;
+    width: 25vw;
     padding-left: 2vw;
+    padding-right: 3vw;
     text-align: left;
     font-size: small;
 
@@ -129,5 +137,25 @@ li {
 
 .controls {
 
-    width: 20vw;
+    width: 30vw;
+}
+
+
+.slidecontainer {
+    /* width: 90%; /\* Width of the outside container *\/ */
+    /* padding-left: 3vw; */
+    /* paddingright: 3wv; */
+}
+
+/* The slider itself */
+.slider {
+    width: 70%; /* Full-width */
+    height: 25px; /* Specified height */
+
+}
+
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+
 }
