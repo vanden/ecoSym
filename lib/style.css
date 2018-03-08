@@ -33,13 +33,6 @@ ul .world-row:after {
 }
 
 
-/* li .cell { */
-/*     float: left; */
-/*     width: 20px; */
-/*     height: 20px; */
-/* } */
-
-
 .cell {
     outline: 1px solid;
     float: left;
@@ -48,7 +41,6 @@ ul .world-row:after {
     width: 15px;
     height: 15px;
 }
-
 
 
 /* These don't really seem the right choices. But, good enough for now. */
