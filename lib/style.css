@@ -21,12 +21,12 @@ figure .world {
 }
 
 
-ul .word-row{
+ul.word-row{
     list-style: none;
 }
 
 
-ul .world-row:after {
+ul.world-row:after {
     content: "";
     clear: both;
     display: block;
