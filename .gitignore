@@ -37,6 +37,14 @@ npm-debug.log
 \#*\#
 /.emacs.desktop
 /.emacs.desktop.lock
+auto/
+
+
+### LaTeX ###
+*.aux
+*.log
+*.out
+*.toc
 
 ### Org-mode ##
 .org-id-locations
