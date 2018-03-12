@@ -13,24 +13,65 @@
 
     <div class="main">
       <div class="description">
-        <p>
-          <ul class="example">
-            <li class="cell rock"></li>
-          </ul> Represent rocks, a barrier impenetrable to both plants
-          and herbivores.
-        </p>
+
+        <!-- Trigger/Open The Modal -->
+        <button id="legendModalBtn">Legend</button>
+
+        <!-- The Modal -->
+        <div id="legendModalContainer" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close" id="legendModalClose">&times;</span>
+            <p>
+              <ul class="example">
+                <li class="cell rock"></li>
+              </ul>Represent rocks, a barrier impenetrable to both
+              plants and herbivores.
+              <ul class="example">
+                <li class="cell plant-0"></li>
+              </ul>Represent a plant seed (too small to be seen by a Herbivore).
+              <ul class="example">
+                <li class="cell plant-1"></li>
+              </ul>Represent a seedling plant.
+              <ul class="example">
+                <li class="cell plant-2"></li>
+              </ul>Represent a small plant.
+              <ul class="example">
+                <li class="cell plant-3"></li>
+              </ul>Represent a medium-sized plant.
+              <ul class="example">
+                <li class="cell plant-4"></li>
+              </ul>Represent a large plant.
+              <ul class="example">
+                <li class="cell plant-5"></li>
+              </ul>Represent a large plant.
+              <ul class="example">
+                <li class="cell herbivore-1"></li>
+              </ul>Represent a tiny herbivore.
+              <ul class="example">
+                <li class="cell herbivore-2"></li>
+              </ul>Represent a small herbivore.
+              <ul class="example">
+                <li class="cell herbivore-3"></li>
+              </ul>Represent a medium-sized herbivore.
+              <ul class="example">
+                <li class="cell herbivore-4"></li>
+              </ul>Represent a large herbivore.
+              <ul class="example">
+                <li class="cell herbivore-5"></li>
+              </ul>Represent a large herbivore.
+            </p>
+
+          </div>
+
+        </div>
+
         <p>
           The world is pre-seeded with a certain percentage of the cells
           populated by rocks, and a certain percentage populated by
           life. Of the cells populated by life, some percentage is
           populated by plants, and some by herbivores.
-        </p>
-        <p>
-          Plants are represented by green squares, the lightest shade
-          representing a seed, the darkest a fully mature plant. Red
-          square represent herbivores, the lightest shade representing a
-          calf, the darkest a fully mature animal. Grey squares
-          represent rocks, a barrier impenetrable to all forms of life.
         </p>
         <p>
           All life forms in the world have various common properties
