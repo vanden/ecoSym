@@ -18,6 +18,8 @@ body {
 figure .world {
     display: inline-block;
     border: 3px solid black;
+    width: 780px;
+    height: 780px;
 }
 
 
