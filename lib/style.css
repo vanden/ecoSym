@@ -331,3 +331,13 @@ button:hover {
 .fa,a:visited {
     text-decoration: none;
 }
+
+.modal a:visited {
+    color: black;
+}
+.modal a {
+    color: black;
+}
+.modal a:hover {
+    color: grey;
+}
