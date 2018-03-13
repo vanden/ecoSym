@@ -286,7 +286,7 @@ button:hover {
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    padding: 30px 20px 30px 30px;
     border: 1px solid #888;
     width: 35%; /* Could be more or less, depending on screen size */
     font-size: 18px;
@@ -295,12 +295,19 @@ button:hover {
 .modal-content p {
     font-size: 18px;
     line-height: 1.3;
+    padding-right: 30px;
 }
 .modal-content dt {
     font-weight: bold;
     font-size: 18px;
     line-height: 1.3;
     text-decoration: underline;
+    padding-top: 6px;
+}
+.modal-content dd {
+    font-size: 18px;
+    line-height: 1.3;
+    padding-right: 30px;
 }
 
 
@@ -310,6 +317,7 @@ button:hover {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    margin-top: -20px;
 }
 
 .close:hover,
