@@ -60,8 +60,8 @@ body {
 figure .world {
     display: inline-block;
     border: 3px solid black;
-    width: 810px;
-    height: 810px;
+    width: 858px;
+    height: 858px;
 }
 
 
@@ -86,8 +86,8 @@ ul.world-row:after {
     color: FloralWhite;
     background-color: WhiteSmoke;
     list-style: none;
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
 }
 
 
