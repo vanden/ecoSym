@@ -16,12 +16,15 @@
 
         <p>
           ecoSym is a 2-D life simulation, with a variety of parameters
-          that can be altered by the sliders. Make a change, and hit the
-          'Reset' button to see the effect on the world.
+          that can be altered by the sliders on the right.
+        </p>
+
+        <p>
+          Make a change, and hit the 'Reset' button to see the effect on
+          the world. Or, click the buttons below to learn more.
         </p>
 
 
-        <button id="legendModalBtn">Legend</button>
         <div id="legendModalContainer" class="modal">
           <div class="modal-content">
             <span class="close" id="legendModalClose">&times;</span>
@@ -71,7 +74,6 @@
 
 
 
-        <button id="worldSettingsModalBtn">World Settings</button>
         <div id="worldSettingsModalContainer" class="modal">
           <div class="modal-content">
             <span class="close" id="worldSettingsModalClose">&times;</span>
@@ -96,12 +98,12 @@
           </div>
         </div>
 
-        
-        <button id="lifeSettingsModalBtn">Life Settings</button>
+
+
         <div id="lifeSettingsModalContainer" class="modal">
           <div class="modal-content">
             <span class="close" id="lifeSettingsModalClose">&times;</span>
-            <p> 
+            <p>
              There are several settings that influence life:
               <dl>
                 These two cannot sum to more than 100:
@@ -115,19 +117,22 @@
         </div>
 
         <!-- <p> -->
-        <!--   All life forms in the world have various common properties -->
-        <!--   (which may take different values for plants and herbivores). -->
-        <!--   These include the chance that in any given turn they will -->
-        <!--   grow, produce offspring, or die, their maximum life span, how -->
-        <!--   long after growing or generating offspring until they can do -->
-        <!--   so again, and the number of offspring that they produce. -->
+        <!--   Herbivores have a specified starting energy, gain energy from -->
+        <!--   eating plants (larger plants providing more energy) and will -->
+        <!--   decrease in size if their energy drops to zero. -->
         <!-- </p> -->
-        <p>
-          Herbivores have a specified starting energy, gain energy from
-          eating plants (larger plants providing more energy) and will
-          decrease in size if their energy drops to zero.
-        </p>
-        <button id="worldResetter">Reset World</button>
+
+        <div class="buttons-container">
+          <button class="description-button" id="lifeSettingsModalBtn">
+            Life Settings
+          </button>
+          <button class="description-button" id="worldSettingsModalBtn">
+            World Settings
+          </button>
+          <button class="description-button" id="legendModalBtn">
+            Legend
+          </button>
+        </div>
       </div>
 
       <div class="world-container">
@@ -136,6 +141,10 @@
 
       <div class="right-sidebar">
         <div class="controls">
+
+          <button id="worldResetter">Reset World</button>
+
+
           <div class="slidecontainer">
             <h3>World Settings</h3>
 
