@@ -167,6 +167,7 @@ ul.world-row:after {
 .buttons-container {
     display: flex;
     flex-direction: column;
+    padding: 15px 0px;
 }
 
 
