@@ -30,44 +30,42 @@
           <div class="modal-content">
             <span class="close" id="legendModalClose">&times;</span>
             <p>
-              <ul class="example">
-                <li class="cell legend rock"></li>
-              </ul>Represent rocks, a barrier impenetrable to both
-              plants and herbivores.
-              <ul class="example">
-                <li class="cell legend plant-0"></li>
-              </ul>Represent a plant seed (too small to be seen by a Herbivore).
-              <ul class="example">
-                <li class="cell legend plant-1"></li>
-              </ul>Represent a seedling plant.
-              <ul class="example">
-                <li class="cell legend plant-2"></li>
-              </ul>Represent a small plant.
-              <ul class="example">
-                <li class="cell legend plant-3"></li>
-              </ul>Represent a medium-sized plant.
-              <ul class="example">
-                <li class="cell legend plant-4"></li>
-              </ul>Represent a large plant.
-              <ul class="example">
-                <li class="cell legend plant-5"></li>
-              </ul>Represent a large plant.
-              <ul class="example">
-                <li class="cell legend herbivore-1"> Represent a tiny herbivore.</li>
-              </ul>
-              <ul class="example">
-                <li class="cell legend herbivore-2"></li>
-              </ul>Represent a small herbivore.
-              <ul class="example">
-                <li class="cell legend herbivore-3"></li>
-              </ul>Represent a medium-sized herbivore.
-              <ul class="example">
-                <li class="cell legend herbivore-4"></li>
-              </ul>Represent a large herbivore.
-              <ul class="example">
-                <li class="cell legend herbivore-5"></li>
-              </ul>Represent a large herbivore.
+              <span><li class="cell cell-legend rock"></li>
+                Represent rocks,
+                a barrier impenetrable to both plants and herbivores.</span>
             </p>
+            <span><li class="cell cell-legend plant-0"></li>
+              Represent a plant seed (too small to be seen by a herbivore).</span>
+            <ul class="example">
+              <li class="cell cell-legend plant-1"></li>
+            </ul>Represent a seedling plant.
+            <ul class="example">
+              <li class="cell cell-legend plant-2"></li>
+            </ul>Represent a small plant.
+            <ul class="example">
+              <li class="cell cell-legend plant-3"></li>
+            </ul>Represent a medium-sized plant.
+            <ul class="example">
+              <li class="cell cell-legend plant-4"></li>
+            </ul>Represent a large plant.
+            <ul class="example">
+              <li class="cell cell-legend plant-5"></li>
+              </ul>Represent the largest plants.
+            <ul class="example">
+                <li class="cell cell-legend herbivore-1"></li>
+            </ul>Represent a tiny herbivore
+            <ul class="example">
+              <li class="cell cell-legend herbivore-2"></li>
+            </ul>Represent a small herbivore.
+            <ul class="example">
+              <li class="cell cell-legend herbivore-3"></li>
+            </ul>Represent a medium-sized herbivore.
+            <ul class="example">
+              <li class="cell cell-legend herbivore-4"></li>
+              </ul>Represent a large herbivore.
+            <ul class="example">
+              <li class="cell cell-legend herbivore-5"></li>
+            </ul>Represent the largest herbivores.
           </div>
         </div>
 
@@ -101,13 +99,50 @@
           <div class="modal-content">
             <span class="close" id="lifeSettingsModalClose">&times;</span>
             <p>
-             There are several settings that influence life:
+             There are several settings that influence life, each having
+             separate settings for Plants and Herbiores:
               <dl>
-                These two cannot sum to more than 100:
-                <dt>Rock Percentage</dt>
-                <dd>The percentage of the world's cells occupied by rocks.</dd>
-                <dt>Life Percentage</dt>
-                <dd>The percentage of the world's cells occupied by life.</dd>
+                <dt>
+                  Maximum Life Span
+                </dt>
+                <dd>
+                  The average maximum life span of the life form.
+                  Individuals have this maximum life span &plusmn 5 turns
+                  (this prevents a mass simultaneous die-off of the
+                  initial organisms.
+                </dd>
+                <dt>
+                  Spontaneous Death Chance
+                </dt>
+                <dd>
+                  The organism's chance of dying spontaneously each
+                  turn. This is in addition to the risk of dying due to
+                  predation or to having reached the maximum life span.
+                </dd>
+                <dt>
+                  Growth Chance
+                </dt>
+                <dd>
+                  The organism's chance of growing in a given turn,
+                  provided it is growth-eligible (not yet at its maximum
+                  size).
+                </dd>
+                <dt>
+                  Spawn Chance
+                </dt>
+                <dd>
+                  The organism's chance of spawning in a given turn,
+                  provided it is spawn-eligible (large enough to span).
+                  size).
+                </dd>
+                <dt>
+                  Delay After Spawn or Growth
+                </dt>
+                <dd>
+                  The number of turns the organism must wait to Spawn or
+                  to Grow after having done either.
+                  size).
+                </dd>
               </dl>
             </p>
           </div>
@@ -125,11 +160,11 @@
 
 
         <div class="buttons-container">
-          <button class="description-button" id="lifeSettingsModalBtn">
-            Life Settings
-          </button>
           <button class="description-button" id="worldSettingsModalBtn">
             World Settings
+          </button>
+          <button class="description-button" id="lifeSettingsModalBtn">
+            Life Settings
           </button>
           <button class="description-button" id="legendModalBtn">
             Legend
@@ -139,10 +174,10 @@
         <div class="icons-container">
 
             <a href="https://www.linkedin.com/in/brian-van-den-broek-33ab2ba3/"           <i class="fa fa-3x fa-linkedin-square" aria-hidden="true"></i></a>
-          
-          
-            <a href="https://github.com/vanden/ecoSym" <i class="fa fa-3x fa-github" aria-hidden="true">  </i> </a> 
-        
+
+
+            <a href="https://github.com/vanden/ecoSym" <i class="fa fa-3x fa-github" aria-hidden="true">  </i> </a>
+
         </div>
 
       </div>
@@ -155,7 +190,7 @@
           <button id="worldResetter">Reset World</button>
 
 
-          
+
           <div class="slidecontainer">
           <h3>World Settings</h3>
             <div class="slide-item">
@@ -184,13 +219,13 @@
           <h3>Herbivore Settings</h3>
             <div class="slide-item">
               <h4>Maximum Life Span: <span id="herb-lifespan-output"></span></h4>
-              <input type="range" min="1" max="200" class="slider" id="herb-lifespan-slide">             
+              <input type="range" min="1" max="200" class="slider" id="herb-lifespan-slide">
             </div>
 
             <div class="slide-item">
               <h4>Spontaneous Death Chance: <span id="herb-deathchance-output"></span></h4>
               <input type="range" min="0" max="100" class="slider" id="herb-deathchance-slide">
-              
+
             </div>
 
             <div class="slide-item">
