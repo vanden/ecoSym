@@ -213,6 +213,11 @@ button:hover {
   /* text-decoration: underline; */
 }
 
+
+.control-button {
+    width: 175px;
+}
+
 .slidecontainer {
     /* width: 90%; /\* Width of the outside container *\/ */
     /* padding-left: 3vw; */
