@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="./lib/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="application/javascript" src="./lib/bundle.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>ecoSym</title>
   </head>
   <body>
@@ -52,8 +53,8 @@
                 <li class="cell legend plant-5"></li>
               </ul>Represent a large plant.
               <ul class="example">
-                <li class="cell legend herbivore-1"></li>
-              </ul>Represent a tiny herbivore.
+                <li class="cell legend herbivore-1"> Represent a tiny herbivore.</li>
+              </ul>
               <ul class="example">
                 <li class="cell legend herbivore-2"></li>
               </ul>Represent a small herbivore.
@@ -69,9 +70,6 @@
             </p>
           </div>
         </div>
-
-
-
 
 
         <div id="worldSettingsModalContainer" class="modal">
@@ -99,7 +97,6 @@
         </div>
 
 
-
         <div id="lifeSettingsModalContainer" class="modal">
           <div class="modal-content">
             <span class="close" id="lifeSettingsModalClose">&times;</span>
@@ -117,10 +114,15 @@
         </div>
 
         <!-- <p> -->
-        <!--   Herbivores have a specified starting energy, gain energy from -->
-        <!--   eating plants (larger plants providing more energy) and will -->
-        <!--   decrease in size if their energy drops to zero. -->
+        <!--   All life forms in the world have various common properties -->
+        <!--   (which may take different values for plants and herbivores). -->
+        <!--   These include the chance that in any given turn they will -->
+        <!--   grow, produce offspring, or die, their maximum life span, how -->
+        <!--   long after growing or generating offspring until they can do -->
+        <!--   so again, and the number of offspring that they produce. -->
         <!-- </p> -->
+
+
 
         <div class="buttons-container">
           <button class="description-button" id="lifeSettingsModalBtn">
@@ -133,96 +135,109 @@
             Legend
           </button>
         </div>
-      </div>
 
+        <div class="icons-container">
+
+            <a href="https://www.linkedin.com/in/brian-van-den-broek-33ab2ba3/"           <i class="fa fa-3x fa-linkedin-square" aria-hidden="true"></i></a>
+          
+          
+            <a href="https://github.com/vanden/ecoSym" <i class="fa fa-3x fa-github" aria-hidden="true">  </i> </a> 
+        
+        </div>
+
+      </div>
       <div class="world-container">
         <figure class="ecosym-world"></figure>
       </div>
 
       <div class="right-sidebar">
         <div class="controls">
-
           <button id="worldResetter">Reset World</button>
 
 
+          
           <div class="slidecontainer">
-            <h3>World Settings</h3>
+          <h3>World Settings</h3>
+            <div class="slide-item">
+              <h4>Rock Percentage: <span id="rock-percentage-output"></span></h4>
+              <input type="range" min="0" max="100" class="slider" id="rock-percentage-slide">
+            </div>
 
-            <h4>Rock Percentage</h4>
-            <input type="range" min="0" max="100" class="slider" id="rock-percentage-slide">
-            <p>Value: <span id="rock-percentage-output"></span></p>
+            <div class="slide-item">
+              <h4>Life Percentage: <span id="life-percentage-output"></span></h4>
+              <input type="range" min="0" max="100" class="slider" id="life-percentage-slide">
+            </div>
 
+            <div class="slide-item">
+              <h4>Herbivore Percentage: <span id="herb-percentage-output"></span></h4>
+              <input type="range" min="0" max="100" class="slider" id="herb-percentage-slide">
+            </div>
 
-            <h4>Life Percentage</h4>
-            <input type="range" min="0" max="100" class="slider" id="life-percentage-slide">
-            <p>Value: <span id="life-percentage-output"></span></p>
-
-
-            <h4>Percentage of life that is Herbivores</h4>
-            <input type="range" min="0" max="100" class="slider" id="herb-percentage-slide">
-            <p>Value: <span id="herb-percentage-output"></span></p>
-
-
-            <h4>Percentage of life that is Plants</h4>
-            <input type="range" min="0" max="100" class="slider" id="plant-percentage-slide">
-            <p>Value: <span id="plant-percentage-output"></span></p>
-
-
-
-
-            <h3>Herbivore Settings</h3>
-
-            <h4>Herbivore Maximum Life Span</h4>
-            <input type="range" min="1" max="200" class="slider" id="herb-lifespan-slide">
-            <p>Value: <span id="herb-lifespan-output"></span></p>
-
-            <h4>Herbivore Spontaneous Death Chance</h4>
-            <input type="range" min="0" max="100" class="slider" id="herb-deathchance-slide">
-            <p>Value: <span id="herb-deathchance-output"></span></p>
-
-            <h4>Herbivore Growth Chance</h4>
-            <input type="range" min="0" max="100" class="slider" id="herb-growthchance-slide">
-            <p>Value: <span id="herb-growthchance-output"></span></p>
-
-            <h4>Herbivore Spawn Chance</h4>
-            <input type="range" min="0" max="100" class="slider" id="herb-spawnchance-slide">
-            <p>Value: <span id="herb-spawnchance-output"></span></p>
-
-            <h4>Herbivore Delay after Spawn or Growth</h4>
-            <input type="range" min="1" max="20" class="slider" id="herb-sgdelay-slide">
-            <p>Value: <span id="herb-sgdelay-output"></span></p>
-
-
-          <h3>Plant Settings</h3>
-
-          <h4>Plant Maximum Life Span</h4>
-          <input type="range" min="1" max="200" class="slider" id="plant-lifespan-slide">
-            <p>Value: <span id="plant-lifespan-output"></span></p>
-
-            <h4>Plant Spontaneous Death Chance</h4>
-            <input type="range" min="0" max="100" class="slider" id="plant-deathchance-slide">
-            <p>Value: <span id="plant-deathchance-output"></span></p>
-
-            <h4>Plant Growth Chance</h4>
-            <input type="range" min="0" max="100" class="slider" id="plant-growthchance-slide">
-            <p>Value: <span id="plant-growthchance-output"></span></p>
-
-            <h4>Plant Spawn Chance</h4>
-            <input type="range" min="0" max="100" class="slider" id="plant-spawnchance-slide">
-            <p>Value: <span id="plant-spawnchance-output"></span></p>
-
-            <h4>Plant Delay after Spawn or Growth</h4>
-            <input type="range" min="1" max="20" class="slider" id="plant-sgdelay-slide">
-            <p>Value: <span id="plant-sgdelay-output"></span></p>
+            <div class="slide-item">
+              <h4>Plant Percentage: <span id="plant-percentage-output"></span></h4>
+              <input type="range" min="0" max="100" class="slider" id="plant-percentage-slide">
+            </div>
 
 
           </div>
+          <div class="slidecontainer">
+          <h3>Herbivore Settings</h3>
+            <div class="slide-item">
+              <h4>Maximum Life Span: <span id="herb-lifespan-output"></span></h4>
+              <input type="range" min="1" max="200" class="slider" id="herb-lifespan-slide">             
+            </div>
 
-          <div class="icons-container">
-            <a href="https://www.linkedin.com/in/brian-van-den-broek-33ab2ba3/">Linked in
-            </a>
-            <a href="https://github.com/vanden/ecoSym">Github
-            </a>
+            <div class="slide-item">
+              <h4>Spontaneous Death Chance: <span id="herb-deathchance-output"></span></h4>
+              <input type="range" min="0" max="100" class="slider" id="herb-deathchance-slide">
+              
+            </div>
+
+            <div class="slide-item">
+              <h4>Growth Chance: <span id="herb-growthchance-output"></span></h4>
+              <input type="range" min="0" max="100" class="slider" id="herb-growthchance-slide">
+            </div>
+
+            <div class="slide-item">
+              <h4>Spawn Chance: <span id="herb-spawnchance-output"></span></h4>
+              <input type="range" min="0" max="100" class="slider" id="herb-spawnchance-slide">
+            </div>
+
+            <div class="slide-item">
+              <h4>Delay After Spawn Growth: <span id="herb-sgdelay-output"></span></h4>
+              <input type="range" min="1" max="20" class="slider" id="herb-sgdelay-slide">
+            </div>
+
+          </div>
+
+          <div class="slidecontainer">
+          <h3>Plant Settings</h3>
+          <div class="slide-item">
+            <h4>Maximum Life Span: <span id="plant-lifespan-output"></span></h4>
+            <input type="range" min="1" max="200" class="slider" id="plant-lifespan-slide">
+          </div>
+
+            <div class="slide-item">
+              <h4>Spontaneous Death Chance: <span id="plant-deathchance-output"></span></h4>
+              <input type="range" min="0" max="100" class="slider" id="plant-deathchance-slide">
+            </div>
+
+            <div class="slide-item">
+              <h4>Growth Chance: <span id="plant-growthchance-output"></span></h4>
+              <input type="range" min="0" max="100" class="slider" id="plant-growthchance-slide">
+            </div>
+
+            <div class="slide-item">
+              <h4>Spawn Chance: <span id="plant-spawnchance-output"></span></h4>
+              <input type="range" min="0" max="100" class="slider" id="plant-spawnchance-slide">
+            </div>
+
+            <div class="slide-item">
+              <h4>Delay after Spawn or Growth: <span id="plant-sgdelay-output"></span></h4>
+              <input type="range" min="1" max="20" class="slider" id="plant-sgdelay-slide">
+            </div>
+          </div>
+
           </div>
         </div>
       </div>
