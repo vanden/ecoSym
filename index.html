@@ -14,13 +14,15 @@
     <div class="main">
       <div class="description">
 
-        <!-- Trigger/Open The Modal -->
+        <p>
+          ecoSym is a 2-D life simulation, with a variety of parameters
+          that can be altered by the sliders. Make a change, and hit the
+          'Reset' button to see the effect on the world.
+        </p>
+
+
         <button id="legendModalBtn">Legend</button>
-
-        <!-- The Modal -->
         <div id="legendModalContainer" class="modal">
-
-          <!-- Modal content -->
           <div class="modal-content">
             <span class="close" id="legendModalClose">&times;</span>
             <p>
@@ -62,25 +64,64 @@
                 <li class="cell legend herbivore-5"></li>
               </ul>Represent a large herbivore.
             </p>
-
           </div>
-
         </div>
 
-        <p>
-          The world is pre-seeded with a certain percentage of the cells
-          populated by rocks, and a certain percentage populated by
-          life. Of the cells populated by life, some percentage is
-          populated by plants, and some by herbivores.
-        </p>
-        <p>
-          All life forms in the world have various common properties
-          (which may take different values for plants and herbivores).
-          These include the chance that in any given turn they will
-          grow, produce offspring, or die, their maximum life span, how
-          long after growing or generating offspring until they can do
-          so again, and the number of offspring that they produce.
-        </p>
+
+
+
+
+        <button id="worldSettingsModalBtn">World Settings</button>
+        <div id="worldSettingsModalContainer" class="modal">
+          <div class="modal-content">
+            <span class="close" id="worldSettingsModalClose">&times;</span>
+            <p>
+              There are several settings that influence the world as a
+              whole:
+              <dl>
+                These two cannot sum to more than 100:
+                <dt>Rock Percentage</dt>
+                <dd>The percentage of the world's cells occupied by rocks.</dd>
+                <dt>Life Percentage</dt>
+                <dd>The percentage of the world's cells occupied by life.</dd>
+
+                <br>
+                These two must sum to 100:
+                <dt>Herbivore Percentage</dt>
+                <dd>The percentage of the living cells occupied by Herbivore.</dd>
+                <dt>Plant Percentage</dt>
+                <dd>The percentage of the living cells occupied by Plants.</dd>
+              </dl>
+            </p>
+          </div>
+        </div>
+
+        
+        <button id="lifeSettingsModalBtn">Life Settings</button>
+        <div id="lifeSettingsModalContainer" class="modal">
+          <div class="modal-content">
+            <span class="close" id="lifeSettingsModalClose">&times;</span>
+            <p> 
+             There are several settings that influence life:
+              <dl>
+                These two cannot sum to more than 100:
+                <dt>Rock Percentage</dt>
+                <dd>The percentage of the world's cells occupied by rocks.</dd>
+                <dt>Life Percentage</dt>
+                <dd>The percentage of the world's cells occupied by life.</dd>
+              </dl>
+            </p>
+          </div>
+        </div>
+
+        <!-- <p> -->
+        <!--   All life forms in the world have various common properties -->
+        <!--   (which may take different values for plants and herbivores). -->
+        <!--   These include the chance that in any given turn they will -->
+        <!--   grow, produce offspring, or die, their maximum life span, how -->
+        <!--   long after growing or generating offspring until they can do -->
+        <!--   so again, and the number of offspring that they produce. -->
+        <!-- </p> -->
         <p>
           Herbivores have a specified starting energy, gain energy from
           eating plants (larger plants providing more energy) and will
