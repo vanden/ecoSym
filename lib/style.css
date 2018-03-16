@@ -226,10 +226,6 @@ button:hover {
 }
 
 .slidecontainer {
-    /* width: 90%; /\* Width of the outside container *\/ */
-    /* padding-left: 3vw; */
-    /* paddingright: 3wv; */
-    /* background-color: pink; */
     margin: 10px;
     border-top: 2px dashed LightGray;
 }
