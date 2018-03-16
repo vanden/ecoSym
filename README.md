@@ -1,5 +1,8 @@
 # ecoSym - A 2D cellular ecosystem simulation
 
+Live version: [ecoSym](https://vanden.github.io/ecoSym/)
+
+
 ## Introduction
 
 ecoSym is a two dimension ecosystem simulation. A cellular grid forms
