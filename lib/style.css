@@ -193,7 +193,7 @@ button:hover {
 	background-color: #353535
 }
 
-.description {
+.description-container {
 
     width: 20vw;
     padding: 0px 10px;
@@ -259,7 +259,7 @@ button:hover {
 
 }
 
-.right-sidebar {
+.right-sidebar-container {
     display: flex;
     flex-direction: column;
 }
