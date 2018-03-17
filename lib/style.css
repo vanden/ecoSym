@@ -32,8 +32,11 @@ body {
 
 @media (max-width: 1860px) {
     body {
-        zoom: .8;
+        zoom: .9;
     }
+    .controls {
+        padding-right: 40px;
+}
 }
 
 ol, ul {
