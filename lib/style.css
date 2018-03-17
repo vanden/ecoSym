@@ -28,6 +28,14 @@ body {
 	line-height: 1;
     background-color: WhiteSmoke;
 }
+
+
+@media (max-width: 1860px) {
+    body {
+        zoom: .8;
+    }
+}
+
 ol, ul {
 	list-style: none;
 }
